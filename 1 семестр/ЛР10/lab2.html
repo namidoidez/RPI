@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 24px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            padding: 10px 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Лабораторная работа 3. Функции. Рекурсивные функции.</h1>
+    <p><b>Цель работы:</b> научится разрабатывать скрипты на JavaScript с использованием функций и рекурсивных функций.</p>
+    <h2>Задача №2</h2>
+    <h3>Формулировка условия</h3>  
+    <p>Числа Фибоначчи <i>u<sub>0</sub>, u<sub>1</sub>, u<sub>2</sub></i> определяются следующим образом: <i>u<sub>n</sub> = u<sub>n-1</sub> + u<sub>n-2</sub> (n=2, 3, ...)</i>. Написать программу вычисления <i>u<sub>n</sub></i> для данного неотрицательного целого <i>n</i>, включающую рекурсивную функцию, которая основана на непосредственном использовании соотношения <i>u<sub>n</sub> = u<sub>n-1</sub> + u<sub>n-2</sub></i>.</p>
+    <h3>Примеры входных и выходных данных</h3>
+    <table>
+        <tr>
+          <th>Тест</th>
+          <th>Входные данные</th>
+          <th>Выходные данные</th>
+        </tr>
+        <tr>
+            <td>Тест 1</td>
+            <td><input type="text" name="enter" value=""  id="data1"></td>
+            <td id="res1"></td>
+          </tr>
+        <tr>
+            <td>Тест 2</td>
+            <td><input type="text" name="enter" value="" id="data2"></td>
+            <td id="res2"></td>
+        </tr>
+        <tr>
+            <td>Тест 3</td>
+            <td><input type="text" name="enter" value="" id="data3"></td>
+            <td id="res3"></td>
+        </tr>
+    </table> 
+    <button id="start">Запустить скрипт на исполнение</button>
+    <button id="show">Показать программный код</button>
+    <img id="code" src="code_1_2.png" style="display: none;">
+    <script defer src="script_3_2.js"></script>
+    <!-- <script src="script_1_2.js"></script> -->
+</body>
+</html>
