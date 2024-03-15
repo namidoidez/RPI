@@ -48,14 +48,13 @@
 		
 		<main class="form-signin">
 		  <h1 class="text-center py-5">Авторизация</h2>
-		  <form class="">
-
+		  <form>
 			<div class="form-floating">
-			  <input type="login" class="form-control" id="floatingInput" placeholder="Логин">
+			  <input type="login" class="form-control" id="floatingInput" placeholder="Логин" required>
 			  <label for="floatingInput">Логин</label>
 			</div>
 			<div class="form-floating">
-			  <input type="password" class="form-control" id="floatingPassword" placeholder="Пароль">
+			  <input type="password" class="form-control" id="floatingPassword" placeholder="Пароль" required>
 			  <label for="floatingPassword">Пароль</label>
 			</div>
 
@@ -64,6 +63,7 @@
 				<input type="checkbox" value="remember-me"> Запомнить меня
 			  </label>
 			</div>
+			  
 			<a class="w-100 btn btn-lg btn-primary" type="submit" href="../personal-account/index.html">Войти</a>
 		  </form>
 		</main>
