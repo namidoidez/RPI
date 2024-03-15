@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Войти</title>
+
+		<link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbar-static/">
+		<link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
+		<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="../main/navbar-top.css">
+		<link rel="stylesheet" href="signin.css">
+		
+		<style>
+		  .bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+		  }
+
+		  @media (min-width: 768px) {
+			.bd-placeholder-img-lg {
+			  font-size: 3.5rem;
+			}
+		  }
+		</style>
+	</head>
+	
+	<body class="bg-light">
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+			<div class="container-fluid" style="margin: 0px 50px 0px 50px">
+				<a class="navbar-brand" href="../main/index.html">gotix</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+					<ul class="navbar-nav me-auto mb-2 mb-md-0"></ul>
+					<form class="navbar-nav">
+						<a class="btn btn-dark me-2" href="index.html">Войти</a>
+						<a class="btn btn-dark" href="../log-in/index.html">Зарегистрироваться</a>
+					</form>
+				</div>
+			</div>
+		</nav>
+		
+		
+		<main class="form-signin">
+		  <h1 class="text-center py-5">Авторизация</h2>
+		  <form class="">
+
+			<div class="form-floating">
+			  <input type="login" class="form-control" id="floatingInput" placeholder="Логин">
+			  <label for="floatingInput">Логин</label>
+			</div>
+			<div class="form-floating">
+			  <input type="password" class="form-control" id="floatingPassword" placeholder="Пароль">
+			  <label for="floatingPassword">Пароль</label>
+			</div>
+
+			<div class="checkbox mb-3">
+			  <label>
+				<input type="checkbox" value="remember-me"> Запомнить меня
+			  </label>
+			</div>
+			<a class="w-100 btn btn-lg btn-primary" type="submit" href="../personal-account/index.html">Войти</a>
+		  </form>
+		</main>
+    
+	<footer class="my-5 pt-5 text-muted text-center text-small">
+		<p class="mb-1">&copy; 2024 Акберов</p>
+		<ul class="list-inline">
+		  <li class="list-inline-item"><a href="#">Политика конфиденциальности</a></li>
+		  <li class="list-inline-item"><a href="#">Поддержка</a></li>
+		</ul>
+	</footer>
+	
+	<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
