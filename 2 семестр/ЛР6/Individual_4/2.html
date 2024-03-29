@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Задание 4</title>
+</head>
+
+<body>
+    <button id="but1">Сдвинуть</button>
+	<br>
+	<br>
+	
+    <img style="display: block; position: absolute; height: 200px; top: 100px; z-index: 6;" data-n="1" src="img.webp" alt="">
+    <img style="display: block; position: absolute; height: 200px; top: 300px; z-index: 5;" data-n="2" src="img.webp" alt="">
+    <img style="display: block; position: absolute; height: 200px; top: 500px; z-index: 4;" data-n="3" src="img.webp" alt="">
+    <img style="display: block; position: absolute; height: 200px; top: 700px; z-index: 3;" data-n="4" src="img.webp" alt="">
+    <img style="display: block; position: absolute; height: 200px; top: 900px; z-index: 2;" data-n="5" src="img.webp" alt="">
+    <img style="display: block; position: absolute; height: 200px; top: 1100px; z-index: 1;" data-n="6" src="img.webp" alt="">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		const but1 = $("#but1");
+		$(document).ready(function() 
+		{
+			but1.click(function() 
+			{
+				let j = 0;
+
+				$("img").each(function(i, v) 
+				{
+					if(i % 2 == 1) 
+					{
+						$(v).animate({top: `${($(v).attr("data-n") - 2) * 200 + 100}px`})
+					}
+				})
+			})
+		})
+	</script>
+</body>
+</html>

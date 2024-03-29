@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Задание 4</title>
+</head>
+<style>
+    
+</style>
+<body>
+	<button>Кнопка</button><br/>
+	<br>
+	<br>
+	
+	<div>
+		<img src="img.webp" width="15%"/>
+	</div>
+	<div>
+		<img src="img.webp" width="15%"/>
+	</div>
+	<div>
+		<img src="img.webp" width="15%"/>
+	</div>
+	<div>
+		<img src="img.webp" width="15%"/>
+	</div>
+	<div>
+		<img src="img.webp" width="15%"/>
+	</div>
+	<div>
+		<img src="img.webp" width="15%"/>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script>
+		$(document).ready(function() 
+		{
+			$("button").click(function() 
+			{
+				$('div:odd').slideUp('slow');
+			});
+		});
+	</script>
+</body>
+</html>

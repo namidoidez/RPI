@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Задание 2</title>
+</head>
+
+<body>
+	<p>Стандартный элемент</p>
+	<ul href="href">
+		<p>Параграф внутри href элемента</p>
+		<p>Параграф внутри href элемента</p>
+	</ul>
+	<p>Стандартный элемент</p>
+	
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script>
+		$(document).ready(function () 
+		{
+			$(window).resize(function() 
+			{
+				$("[href]").hide();
+			});
+		});
+	</script>
+</body>
+</html>

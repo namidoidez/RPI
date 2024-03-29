@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Задание 2</title>
+</head>
+
+<body>
+	<button id="but1">Вернуть</button>
+	<br>
+	<br>
+	
+	<p align="not center">Стандартный элемент</p>
+	<p align="center">align = center</p>
+	<p align="not center">Стандартный элемент</p>
+	<p align="center">align = center</p>
+	
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script>
+		$(document).ready(function() 
+		{
+			$("p[align='center']").dblclick(function() 
+			{
+				$("p[align='center']").hide(1);
+			});
+			$("#but1").dblclick(function() 
+			{
+				$("p[align='center']").show(1);
+			});
+		});
+	</script>
+</body>
+</html>

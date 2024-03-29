@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Задание 1</title>
+	
+</head>
+
+<body>
+	<button id="but1">Скрыть</button>
+	<button id="but2">Показать</button>
+	<br>
+	<br>
+
+	<p align="not center">Стандартный элемент</p>
+	<p align="center">align = center</p>
+	<p align="not center">Стандартный элемент</p>
+	<p align="center">align = center</p>
+	
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script>
+		$(document).ready(function()
+		{
+			$("#but1").click(function() 
+			{
+				$("p[align='center']").hide();
+			});
+			$("#but2").click(function()
+			{
+				$("p[align='center']").show();
+			});
+		});
+	</script>
+</body>
+</html>

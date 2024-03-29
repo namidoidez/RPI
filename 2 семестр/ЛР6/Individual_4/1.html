@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+	<title>Задание 4</title>
+</head> 
+
+<body> 
+	<button>Сдвинуть 3й и 5й параграфы влево</button> 
+	<br>
+	<br>
+	
+	<div align="right" id="div1" style="width:180px;height:20px;position:absolute">Квадрат 1</div> <br>
+	<div  id="div2"style="background:blue;height:25px;width:25px;position:absolute;"> </div> <br><br>
+
+	<div align="right" id="div3" style="width:180px;height:20px;position:absolute">Квадрат 2</div><br>
+	<div  id="div4"style="background:green;height:25px;width:25px;position:absolute;"></div> <br><br>
+
+	<div align="right" id="div5" style="width:180px;height:20px;position:absolute;">Квадрат 3</div><br>
+	<div  id="div6"style="background:black;height:25px;width:25px;position:absolute;"></div> <br><br>
+
+	<div align="right" id="div7" style="width:180px;height:20px;position:absolute">Квадрат 4</div><br>
+	<div  id="div8"style="background:fuchsia;height:25px;width:25px;position:absolute;"></div> <br><br>
+
+	<div align="right" id="div9" style="width:180px;height:20px;position:absolute;">Квадрат 5</div><br>
+	<div  id="div10"style="background:red;height:25px;width:25px;position:absolute;"></div> 
+	
+	<script src="http://code.jquery.com/jquery-latest.js"></script> 
+	<script> 
+		$(document).ready(function () 
+		{ 
+			$("button").click(function () 
+			{ 
+				$("#div5[align|='right'").animate({left: '-100px' });
+				$("#div9[align|='right'").animate({left: '-100px' }); 
+			}); 
+			$("#div2").click(function () 
+			{
+				$('#div2').delay(100).animate({marginTop:+30},0);
+			});
+			$("#div4").click(function () 
+			{
+				$('#div4').delay(100).animate({marginTop:+30},0);
+			});
+			$("#div6").click(function () 
+			{
+				$('#div6').delay(100).animate({marginTop:+30},0);
+			});
+			$("#div8").click(function () 
+			{
+				$('#div8').delay(100).animate({marginTop:+30},0);
+			});
+			$("#div10").click(function () 
+			{
+				$('#div10').delay(100).animate({marginTop:+30},0);
+			});
+		}); 
+	</script>
+</body> 
+</html>

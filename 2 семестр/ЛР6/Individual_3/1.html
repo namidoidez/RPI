@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Задание 3</title>
+</head>
+
+<body>
+    <button id="but1">Показать</button>
+    <button id="but2">Скрыть</button>
+	<br>
+	<br>
+	
+	<img src="img.webp" alt="">
+    <img src="img.webp" alt="">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() 
+		{
+			$("img").fadeOut(100);
+		})
+
+		let f = 0;
+		const but1 = $("#but1");
+		const but2 = $("#but2");
+
+		but1.click(function() 
+		{
+			f = 0;
+			show()
+		})
+
+		function show() 
+		{
+			if(f == 1) return;
+			$("img:odd").fadeIn(2000, () => { $("img:odd").fadeOut(2000); show() });
+			$("img:even").fadeOut(2000, () => $("img:even").fadeIn(2000));
+		}
+
+		but2.click(function() 
+		{
+			$("img").fadeOut(3000);
+			f = 1;
+		})
+	</script>
+</body>
+</html>

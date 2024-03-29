@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Задание 1</title>
+</head>
+
+<body>
+	<button id="but1">Скрыть</button>
+	<button id="but2">Показать</button>
+	<br>
+	<br>
+	
+	<table>
+		<tr>
+			<th>Четный</th>
+			<th>Элемент</th>
+		</tr>
+		<tr>
+			<th>Нечетный</th>
+			<th>Элемент</th>
+		</tr>
+		<tr>
+			<th>Четный</th>
+			<th>Элемент</th>
+		</tr>
+		<tr>
+			<th>Нечетный</th>
+			<th>Элемент</th>
+		</tr>
+		<tr>
+			<th>Четный</th>
+			<th>Элемент</th>
+		</tr>
+		<tr>
+			<th>Нечетный</th>
+			<th>Элемент</th>
+		</tr>
+	</table>
+	
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script>
+		$(document).ready(function()
+		{
+			$("#but1").click(function()
+			{
+				$("tr:even").hide();
+			});
+			$("#but2").click(function()
+			{
+				$("tr:even").show();
+			});
+		});
+	</script>
+</body>
+</html>

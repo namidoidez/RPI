@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Задание 3</title>
+</head>
+
+<body>
+    <button id="but1">Запуск</button>
+    <br>
+	<br>
+ 
+	<div id="div1" style="width:40px;height:40px;float:left;display:none;background-color:blue;"></div>
+	<div id="div2" style="width:40px;height:40px;float:left;display:none;background-color:green;"></div>
+	<div id="div3" style="width:40px;height:40px;float:left;display:none;background-color:black;"></div>
+	<div id="div4" style="width:40px;height:40px;float:left;display:none;background-color:fuchsia;"></div>
+	<div id="div5" style="width:40px;height:40px;float:left;display:none;background-color:red;"></div>
+ 
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script>
+		$("#but1").click(function()
+		{
+			var i=0;
+			do
+			{
+				$('#div1').delay(150);
+				$('#div2').delay(150);
+				$('#div3').delay(150);
+				$('#div4').delay(150);
+				$('#div5').delay(150);
+
+				if(i==0)
+				{
+					$("#div1").fadeIn();
+				}
+				i++; console.log(i);
+
+				if(i==4)
+				{
+					$("#div2").fadeIn();
+				}
+
+				if(i==8)
+				{
+					$("#div3").fadeIn();
+				}
+
+				if(i==12)
+				{
+					$("#div4").fadeIn();
+				}
+
+				if(i==16)
+				{
+					$("#div5").fadeIn();
+				}
+
+				if(i==20)
+				{
+					$("#div5").fadeOut();
+				}
+
+				if(i==24)
+				{
+					$("#div4").fadeOut();
+				}
+
+				if(i==28)
+				{
+					$("#div3").fadeOut();
+				}
+
+				if(i==32)
+				{
+					$("#div2").fadeOut();
+				}
+
+				if(i==36)
+				{
+					$("#div1").fadeOut();
+				}
+			}
+			while(i<37);
+		});
+	</script>
+</body>
+</html>

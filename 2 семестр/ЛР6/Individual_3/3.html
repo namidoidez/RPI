@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Задание 3</title>
+	
+	<style>
+		.hidden {
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+    <button id="toggleButton">Запуск</button>
+	<br>
+	<br>
+	
+    <div id="paragraphs">
+        <p class="hidden">Параграф 1</p>
+        <p class="hidden">Параграф 2</p>
+        <p class="hidden">Параграф 3</p>
+        <p class="hidden">Параграф 4</p>
+        <p class="hidden">Параграф 5</p>
+        <p class="hidden">Параграф 6</p>
+        <p class="hidden">Параграф 7</p>
+        <p class="hidden">Параграф 8</p>
+        <p class="hidden">Параграф 9</p>
+        <p class="hidden">Параграф 10</p>
+    </div>
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() 
+		{
+            let visible = false;
+            let evenVisible = true;
+
+            $('#toggleButton').click(function() 
+			{
+				setInterval(function() 
+				{
+                    if (evenVisible) 
+					{
+                        for (let i = 0; i < 10; i += 2) {
+                            $('#paragraphs p:eq(' + i + ')').fadeIn(2000);
+                        }
+                    } else {
+                        for (let i = 1; i < 10; i += 2) {
+                            $('#paragraphs p:eq(' + i + ')').fadeIn(2000);
+                        }
+                    }
+
+                    setTimeout(() => 
+					{
+                        if (evenVisible) 
+						{
+                            for (let i = 0; i < 10; i += 2) 
+							{
+                                $('#paragraphs p:eq(' + i + ')').fadeOut(2000);
+                            }
+                        } else 
+						{
+                            for (let i = 1; i < 10; i += 2) 
+							{
+                                $('#paragraphs p:eq(' + i + ')').fadeOut(2000);
+                            }
+                        }
+                    }, 4000);
+
+                    evenVisible = !evenVisible;
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
