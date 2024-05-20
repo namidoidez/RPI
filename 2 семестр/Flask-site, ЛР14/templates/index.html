@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>TechFix</title>
+	
+    <link rel="stylesheet" href="static/CSS/style.css"/>
+    <link rel="stylesheet" href="static/CSS/responsiveStyle.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"/>
+    
+    <script src="static/JS/index.js"></script>
+</head>
+<body>
+    {% include 'header.html' %}
+
+    <main>
+        <section class="horizontal-container1">
+            <div style="margin-bottom: 30px">
+                <div>
+                    <div class="left-border-line">
+                        <p class="middle-text" style="color: #545454;">
+                            Что такое TechFIX?
+                        </p>
+                        
+                        <h1 class="large-text" style="width: 80%; margin-bottom: 30px">
+                            Решение для управления предприятием по ремонту электротехники
+                        </h1>
+                    </div>
+                </div>
+                    
+                <a href="{{url_for('about')}}" class="button-form white-button">Узнать подробнее</a>
+            </div>
+
+            <img src="static/IMG/img1.png" class="img-decoration1">
+        </section>
+            
+        <section>
+            <div>
+                <h2 class="large-text">Почему именно мы?</h2>
+                
+                <p class="middle-text" style="color: #545454;">TechFIX помогает упростить работу в предприятии по ремонту электротехники на каждом этапе.</p>
+            </div>
+            
+            <div class="horizontal-container2" style="margin-top: 50px;">
+                <div class="block">
+                    <img class="img-block" src="static/IMG/Handshake.png">
+                    <p class="middle-text">Приёмка</p>
+                </div>
+
+                <div class="block">
+                    <img class="img-block" src="static/IMG/Repair.png">
+                    <p class="middle-text">Диагностика</p>
+                </div>
+
+                <div class="block">
+                    <img class="img-block" src="static/IMG/Wrench.png">
+                    <p class="middle-text">Ремонт</p>
+                </div>
+
+                <div class="block">
+                    <img class="img-block" src="static/IMG/Like.png">
+                    <p class="middle-text">Выдача</p>
+                </div>
+            </div>
+        </section>
+            
+        <section >
+            <h2 class="large-text">TechFIX позволяет:</h2>
+
+            <div class="border-block">
+                <div class="horizontal-container4">
+                    <img src="static/IMG/workExample.png" class="img-decoration2"/>
+
+                    <div class="middle-text vertical-container1 content-padding">
+                        <p class="bottom-border-line">Управлять запасами на складе комплектующих</p>
+                        <p class="bottom-border-line">Управлять продажами и заказами</p>
+                        <p class="bottom-border-line">Управлять ремонтом и заявками на ремонт</p>
+                        <p class="bottom-border-line">Вести учёт финансовых операций и учёт налогов</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+            
+        <section>
+            <div class="border-block">
+                <div class="content-padding">
+                    <h2 class="large-text">Попробуйте систему в работе — это бесплатно!</h2>
+                    <p class="middle-text" style="color: #545454;">Зарегистрируйтесь и тестируйте все возможности системы в течение 14 дней.</p>
+
+                    <div class="horizontal-container3">
+                        <a href="#" class="button-form white-button">Тарифные планы</a>
+                        <a href="{{url_for('register')}}" class="button-form orange-button">Регистрация</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    {% include 'footer.html' %}
+</body>

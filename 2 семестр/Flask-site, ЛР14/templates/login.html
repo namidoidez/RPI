@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>Войти</title>
+	
+	<link rel="stylesheet" href="static/CSS/style.css"/>
+	<link rel="stylesheet" href="static/CSS/responsiveStyle.css"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"/>
+	
+	<link rel="stylesheet" href="static/CSS/login.css"/>
+	<link rel="stylesheet" href="static/CSS/form-validation.css"/>
+	<link rel="stylesheet" href="static/assets/dist/css/bootstrap.min.css"/>
+	
+	<script src="static/JS/index.js"></script>
+</head>
+
+<body>
+	{% include 'header.html' %}
+	
+	<section class="container">
+		<h1 class="text-center">Авторизация</h1>
+		<p class="lead"></p>
+		{% for cat, msg in get_flashed_messages(True) %}
+		<div class="flash {{cat}}">{{msg}}</div>
+		{% endfor %}
+		<form class="" action="/login" method="POST">
+			<div class="form-floating">
+				<input type="login" class="form-control" name="username" placeholder="Логин" required>
+				<label for="floatingInput">Логин</label>
+			</div>
+
+			<div class="form-floating">
+				<input type="password" class="form-control" name="psw" placeholder="Пароль" required>
+				<label for="floatingPassword">Пароль</label>
+			</div>
+
+			<div class="checkbox mb-3">
+				<label>
+					<input type="checkbox" name="remember_me"> Запомнить меня
+				</label>
+			</div>
+
+			<button class="w-100 button-form orange-button btn-lg" type="submit">Войти</button>
+		</form>
+	</section>
+
+	{% include 'footer.html' %}
+</body>
+</html>

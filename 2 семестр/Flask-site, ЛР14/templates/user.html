@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Личный профиль</title>
+
+	<link rel="stylesheet" href="static/CSS/style.css"/>
+	<link rel="stylesheet" href="static/CSS/responsiveStyle.css"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
+	
+	<link rel="stylesheet" href="static/assets/dist/css/bootstrap.min.css">
+
+	<style>
+		#real-estates-detail #author img {
+			-webkit-border-radius: 100%;
+			-moz-border-radius: 100%;
+			-ms-border-radius: 100%;
+			-o-border-radius: 100%;
+			border-radius: 100%;
+			border: 5px solid #ecf0f1;
+			margin-bottom: 10px;
+		}
+		#real-estates-detail .sosmed-author i.fa {
+			width: 30px;
+			height: 30px;
+			border: 2px solid #bdc3c7;
+			color: #bdc3c7;
+			padding-top: 6px;
+			margin-top: 10px;
+		}
+		.panel-default .panel-heading {
+			background-color: #fff;
+		}
+		#real-estates-detail .slides li img {
+			height: 450px;
+		}
+	</style>
+
+	<script src="static/JS/index.js"></script>
+</head>
+<body>
+	{% include 'header.html' %}
+	
+	<section class="container">
+		<h1 class="text-center">Личные данные</h1>
+		<p class="lead"></p>
+		
+		<div class="row" id="real-estates-detail">
+			<div class="col-lg-4 col-md-4 col-xs-12 text-center" id="author">
+				<img src="static/IMG/default.png" style="width: 150px">
+				<h3>@{{current_user.get_username()}}</h3>
+				<p>на сайте с {{current_user.get_registrationdate()}}</p>
+			</div>
+			
+			<div class="col-lg-4 col-md-4 col-xs-12 text-left" id="author">
+				<table class="table table-th-block">
+					<tbody>
+						<tr><td class="active">Фамилия</td><td>{{current_user.get_lastname()}}</td></tr>
+						<tr><td class="active">Имя</td><td>{{current_user.get_firstname()}}</td></tr>
+						<tr><td class="active">E-mail</td><td>{{current_user.get_email()}}</td></tr>
+					</tbody>
+				</table>	
+			</div>
+		</div>
+	</section>
+	
+	{% include 'footer.html' %}
+</body>
+</html>

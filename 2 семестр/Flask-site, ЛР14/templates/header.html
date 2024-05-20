@@ -1,0 +1,52 @@
+<header style="display: flex; align-items: center; justify-content: space-between;">
+    <a href="{{url_for('index')}}">
+        <img class="img-logo" src="static/IMG/Logo.png">
+    </a>
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="#" class="navigation-button">Возможности</a>
+            </li>
+            <li>
+                <a href="#" class="navigation-button">Демонстрация</a>
+            </li>
+            <li>
+                <a href="#" class="navigation-button">Тарифы</a>
+            </li>
+            <li>
+                <a href="{{url_for('FAQ')}}" class="navigation-button">Поддержка</a>
+            </li>
+            {% if current_user.is_authenticated %}
+            <li>
+                <a href="{{url_for('user')}}" class="button-form white-button">Профиль</a>
+            </li>
+            <li>
+                <a href="{{url_for('logout')}}" class="button-form orange-button">Выйти</a>
+            </li>
+            {% else %}
+            <li>
+                <a href="{{url_for('register')}}" class="button-form white-button">Регистрация</a>
+            </li>
+            <li>
+                <a href="{{url_for('login')}}" class="button-form orange-button">Войти</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+    <div class="vertical-menu-button">
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+    </div>
+    <nav class="vertical-menu">
+        <div class="X"></div>
+        <div style="width: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; color: white">
+            <a href="#" class="navigation-button">Возможности</a>
+            <a href="#" class="navigation-button">Демонстрация</a>
+            <a href="#" class="navigation-button">Тарифы</a>
+            <a href="{{url_for('FAQ')}}" class="navigation-button">Поддержка</a>
+            <a href="{{url_for('register')}}" class="navigation-button">Регистрация</a>
+            <a href="{{url_for('login')}}" class="navigation-button">Войти</a>
+        </div>
+    </nav>
+</header>
