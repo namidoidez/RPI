@@ -1,0 +1,2 @@
+MAP_TOKEN = ""
+GPT_TOKEN = ""
