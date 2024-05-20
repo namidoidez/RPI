@@ -1,0 +1,297 @@
+﻿@import url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap);
+
+* {
+    font-family: 'Montserrat';
+	font-style: normal;
+	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    text-decoration: inherit;
+    line-height: normal;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 25px;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+li:last-child {
+    margin-right: 0px;
+}
+
+a, button {
+    cursor: pointer;
+}
+
+a:last-child {
+    margin-right: 0px;
+}
+
+header {
+    padding: 30px 50px 30px 50px;
+}
+
+    header a {
+        text-decoration: none;
+		color: black;
+    }
+
+    header li {
+        margin-right: 25px;
+    }
+
+section {
+    padding: 60px 50px 60px 50px;
+}
+
+    section a {
+        margin-right: 25px;
+        color: black;
+    }
+
+footer {
+    background-color: #545454;
+    padding: 30px 50px 30px 50px;
+}
+
+    footer p {
+        margin-bottom: 15px;
+    }
+
+    footer a {
+        margin-bottom: 15px;
+        color: white;
+    }
+
+.menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+.vertical-menu {
+    display: none;
+}
+
+    .vertical-menu-line:last-child {
+        margin-bottom: 0;
+    }
+
+
+/* Img */
+.img-logo {
+    width: 186px; 
+    height: 51.2px;
+}
+
+.img-decoration1 {
+    
+}
+
+.img-soc-network {
+    width: 55px; 
+    height: 55px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+.img-block {
+    width: 132px; 
+    height: 132px;
+}
+
+.img-decoration2 {
+    width: 673px;
+    height: 376px;
+}
+
+
+/* Border */
+.left-border-line {
+    border-left: 0.8px solid #FF6B00;
+    padding-left: 30px;
+}
+
+.bottom-border-line {
+    border-bottom: 0.8px solid #FF6B00;
+}
+
+.border-block {
+    border-radius: 45px; 
+    background: #F5F5F5;
+    -webkit-box-shadow: 2px 2px 20px -5px rgba(34, 60, 80, 0.2) inset;
+    -moz-box-shadow: 2px 2px 20px -5px rgba(34, 60, 80, 0.2) inset;
+    box-shadow: 2px 2px 20px -5px rgba(34, 60, 80, 0.2) inset;
+}
+
+    .border-block .content-padding {
+        padding: 50px 20px 50px 20px;
+    }
+
+
+/* Text */
+.small-text {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.middle-text {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.large-text {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+
+/* Button */
+.menu-line {
+    width: 32px;
+    height: 2px;
+    background-color: #FF6B00;
+    margin-bottom: 8px;
+    display: none;
+}
+
+.vertical-menu-button {
+    display: none;
+}
+
+.activate {
+    transform: translateX(0) !important;
+}
+
+.X:after {
+    display: inline-block;
+    color: white;
+    font-size: 48px;
+    content: "\00d7";
+}
+
+.button-form {
+    border: 0.8px solid #FF6B00;
+    border-radius: 3px;
+	padding: 9px 12px 9px 12px;
+}
+
+.navigation-button {
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+}
+
+.white-button {
+    font-size: 20px;
+    font-weight: 400;
+    background-color: white;
+    color: black;
+    align-content: center;
+}
+
+.orange-button {
+    font-size: 20px;
+    font-weight: 400;
+    background-color: #FF6B00;
+    color: #FFF;
+    align-content: center;
+}
+
+
+/* Container */
+.horizontal-container1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.horizontal-container2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.horizontal-container3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.horizontal-container4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.horizontal-container5 {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.vertical-container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.vertical-container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-end;
+}
+
+
+/* Geometry primitive */
+.block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Notification */
+.flash {padding: 10px;}
+
+.flash.success {
+	border: 1px solid #21DB56;
+	background: #AEFFC5;
+}
+
+.flash.error {
+	border: 1px solid #FF4343;
+	background: #FF9C9C;
+}
+
+
+/* For API*/
+.map {
+	width: 500px;
+	height: 500px;
+	background-color: #333;
+}
