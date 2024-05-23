@@ -37,6 +37,9 @@ def create_db():
     with open('sq_db.sql', 'r') as file:
         query = file.read()
 
+    db_cursor.execute(query)
+    db_cursor.commit()
+
 def is_day_name(day_name):
     return day_name.lower() in days
 
@@ -100,8 +103,8 @@ def handle_help(message):
 /help - получить справку о боте и доступных командах
 /week - узнать, верхняя или нижняя текущая неделя
 /kstu - получить ссылку на официальный сайт КНИТУ
-/vk - получить ссылку на официальную группу КНИТУ ВКонтакте
-/tg - получить ссылку на официальную группу КНИТУ в телеграмм
+/vk - получить ссылку на официальную группу КНИТУ в VK
+/tg - получить ссылку на официальный Telegram-канал КНИТУ
 /location - получить адреса всех учебных корпусов"""
 
     bot.send_message(message.chat.id, help_message)
@@ -123,11 +126,11 @@ def handle_location(message):
 
 @bot.message_handler(commands=['vk'])
 def handle_vk_group(message):
-    bot.send_message(message.chat.id, "Группа Казанского национального технического университета (КНИТУ) во ВКонтакте: https://vk.com/knitu")
+    bot.send_message(message.chat.id, "Группа Казанского национального технического университета (КНИТУ) в VK: https://vk.com/knitu")
 
 @bot.message_handler(commands=['tg'])
 def handle_vk_group(message):
-    bot.send_message(message.chat.id, "Группа Казанского национального технического университета (КНИТУ) в Телеграмм: https://t.me/knitu_official")
+    bot.send_message(message.chat.id, "Telegram-канал Казанского национального технического университета (КНИТУ): https://t.me/knitu_official")
 
 @bot.message_handler(commands=['kstu'])
 def kstu_handler(message):
@@ -140,14 +143,6 @@ def handle_week(message):
 @bot.message_handler(func=lambda message: message.text.lower() == "куда идти")
 def handle_wheretogo(message):
     bot.send_message(message.chat.id, "Для получения адресов корпусов воспользуйтесь командной /location")
-
-@bot.message_handler(func=lambda message: message.text.lower() == "когда стипендия")
-def handle_scholarship(message):
-    bot.send_message(message.chat.id, "Стипендия начисляется на счет в 23-27 числах каждого месяца.")
-
-@bot.message_handler(func=lambda message: message.text.lower() == "когда летние каникулы")
-def handle_scholarship(message):
-    bot.send_message(message.chat.id, "Примерно в середине июня.")
 
 @bot.message_handler(func=lambda message: True)
 def handle_day(message):
